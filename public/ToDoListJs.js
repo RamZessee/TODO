@@ -64,4 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('label-name').addEventListener('keydown', e => {if(e.key==='Enter'){e.preventDefault();addLabel();}});
     byId('editor-labels').addEventListener('click', e => {const b=e.target.closest('[data-remove-label]');if(b){labels.splice(Number(b.dataset.removeLabel),1);renderEditorLabels();}});
     document.querySelectorAll('[data-label-name]').forEach(b => b.addEventListener('click',()=>addLabel(b.dataset.labelName,b.dataset.labelColor)));
+    function renderChecklist() {
+        const done=checklist.filter(x=>x.done).length; byId('checklist-count').textContent=`${done} из ${checklist.length}`;
+        byId('checklist-progress').style.width=`${checklist.length ? done/checklist.length*100 : 0}%`;
+        byId('editor-checklist').innerHTML=checklist.map((item,i)=>`<div class="checklist-row ${item.done?'checked':''}"><input type="checkbox" data-check="${i}" ${item.done?'checked':''} aria-label="Выполнено: ${escape(item.text)}"><input type="text" data-check-text="${i}" value="${escape(item.text)}" maxlength="200" aria-label="Текст пункта ${i+1}" required><button type="button" class="icon-btn" data-remove-check="${i}" aria-label="Удалить пункт ${i+1}">${icon('close')}</button></div>`).join('');
+    }
 });
