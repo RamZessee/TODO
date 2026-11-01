@@ -28,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const labelsHtml = values => values.map(label => `<span class="task-label label-${escape(label.color)}">${escape(label.name)}</span>`).join('');
     const message = text => { const box = byId(dialog.open ? 'dialog-message' : 'task-message'); box.textContent = text; box.classList.toggle('is-hidden', !text); };
     const clearMessages = () => ['task-message','dialog-message'].forEach(id => { byId(id).textContent = ''; byId(id).classList.add('is-hidden'); });
+    const draft = () => JSON.stringify({task:input.value,description:byId('task-description').value,status:status.value,priority:priority.value,dueDate:byId('task-due').value,labels,checklist,labelInput:byId('label-name').value,checkInput:byId('checklist-input').value});
 });
