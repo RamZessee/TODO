@@ -60,4 +60,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if (labels.length >= 5) {message('На задаче может быть до 5 меток.');return false;}
         labels.push({name,color}); byId('label-name').value = ''; renderEditorLabels(); return true;
     }
+    byId('add-label').addEventListener('click', () => addLabel());
 });
