@@ -91,4 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!response.ok || data.success!==true)throw new Error(response.status===404?'Задача уже удалена. Обновите страницу.':response.status===422?'Проверьте поля задачи: дату, длину текста и пункты чек-листа.':'Не удалось сохранить изменения. Попробуйте ещё раз.');
         return data;
     }
+    async function sync(action,payload) {
+        if(busy)return false;busy=true;submit.disabled=true;byId('task-list').setAttribute('aria-busy','true');
+        try {const data=await request(action,payload);tasks=Array.isArray(data.tasks)?data.tasks:[];loaded=true;render();clearMessages();return true;}
+        finally{busy=false;submit.disabled=false;byId('task-list').setAttribute('aria-busy','false');}
+    }
 });
