@@ -4,515 +4,515 @@
 
 | Коммит | Изменение |
 | --- | --- |
-| 19e1bd9 | docs: описать проект и восстановление истории разработки |
-| a731e6f | chore: исключить пароли, локальную базу, архивы и временные файлы |
-| c6b7a23 | chore: настроить окончания строк и бинарные изображения |
-| 95f8999 | config: добавить образец настроек без личных секретов |
-| fe4f195 | config: загрузить настройки окружения и подключение PDO |
-| 2db4f47 | security: добавить сессии, CSRF и общие функции авторизации |
-| 2b6e2fe | db: создать таблицы пользователей и задач |
-| 875d47a | db: добавить запуск и журнал миграций |
-| c3e4754 | setup: генерировать локальные настройки со случайными паролями |
-| a0c6f7f | ui: добавить набор SVG-иконок |
-| 2f5977b | ui: добавить кнопку переключения темы |
-| a8dc524 | ui: добавить шапку с логотипом |
-| 5a91b7f | ui: добавить подвал страницы |
-| 8f77fe6 | ui: добавить иллюстрацию страниц авторизации |
-| e073784 | routing: добавить страницу неизвестного адреса |
-| b00002a | feat: добавить серверную обработку регистрации |
-| 2b05a2b | ui: добавить разметку регистрации |
-| f1b975f | feat: добавить серверную обработку входа |
-| 766577c | ui: добавить разметку входа |
-| 4787a00 | feat: добавить серверную обработку личного кабинета |
-| ae79562 | ui: добавить разметку личного кабинета |
-| b89b922 | feat: добавить серверную обработку доски задач |
-| 9e1ae7b | ui: добавить разметку доски задач |
-| 8c7b5d4 | routing: собрать страницы через общий вход и шаблон |
-| a23737e | db: добавить описание, сроки, метки и чек-листы |
-| 6c521b0 | api: добавить операции с задачами и проверку владельца |
-| 0b2bdd4 | board: добавить блок поведения 1 |
-| 1c4a3c2 | board: добавить config |
-| e00ebfa | board: добавить dialog |
-| af5e855 | board: добавить status |
-| 643df4e | board: добавить sections |
-| a9b4fe5 | board: добавить tasks |
-| 37fb75e | board: добавить labels |
-| e2c8d38 | board: добавить paths |
-| 35bf83f | board: добавить icon |
-| c41da48 | board: добавить escape |
-| ee026c5 | board: добавить localDate |
-| 1db6a95 | board: добавить overdue |
-| 5f29c8e | board: добавить dateInfo |
-| 66be469 | board: добавить labelsHtml |
-| 9a9b3ce | board: добавить message |
-| ffe90eb | board: добавить clearMessages |
-| 000d548 | board: добавить draft |
-| c96ffb7 | board: добавить closeEditor |
-| c67a72a | board: добавить openEditor |
-| 2666a27 | board: обработать click для button |
-| 38fa4ea | board: обработать click для close-dialog |
-| beda2a7 | board: обработать cancel для dialog |
-| ee13a71 | board: обработать close для dialog |
-| 88eef77 | board: добавить renderEditorLabels |
-| bb25042 | board: добавить addLabel |
-| 0652623 | board: обработать click для add-label |
-| 8303105 | board: обработать keydown для label-name |
-| d4592dd | board: добавить b |
-| 70f99aa | board: обработать click для b |
-| 44db205 | board: добавить renderChecklist |
-| 78320cc | board: добавить addChecklist |
-| 14219a8 | board: обработать click для add-checklist |
-| 5c59b09 | board: обработать keydown для checklist-input |
-| d7612f8 | board: обработать input для editor-checklist |
-| 946dc87 | board: обработать change для editor-checklist |
-| 16053e3 | board: добавить b |
-| 1ad7a6f | board: обработать keydown для editor-checklist |
-| d8b1593 | board: обработать click для clear-due |
-| d621e72 | board: обработать click для b |
-| 7b6db85 | board: добавить request |
-| 6b8da17 | board: добавить sync |
-| 93eefb8 | board: добавить makeCard |
-| 5049ced | board: добавить renderUpcoming |
-| 8753c18 | board: добавить render |
-| 22a64fd | board: обработать submit для form |
-| 41ee6d9 | board: добавить cardAction |
-| e3aada3 | board: обработать click для task-list |
-| 960eee7 | board: добавить b |
-| b356bea | board: добавить блок поведения 2 |
-| e4b5780 | board: обработать click для b |
-| afe3e55 | board: обработать click для b |
-| ceca327 | board: обработать input для task-search |
-| 73e62f1 | board: обработать click для priority-sort-btn |
-| 0fa8a1d | board: обработать visibilitychange для document |
-| 6936a4e | board: добавить блок поведения 3 |
-| 66d0225 | board: добавить блок поведения 4 |
-| dabdd46 | theme: сохранять выбор светлой и тёмной темы в браузере |
-| 0e4214e | style: подключить шрифт Manrope с нужными начертаниями |
-| 7b9ea0f | style: оформить :root |
-| aaf4c58 | style: оформить * |
-| 176116c | style: задать фон, цвет и базовые размеры текста страницы |
-| 9484ac7 | style: применить Manrope и резервные системные шрифты |
-| 26e865c | style: оформить button,input,select,textarea |
-| 78ef289 | style: оформить button,a,input,textarea,select |
-| 5aa1d0a | style: оформить button,a |
-| aa3715a | style: оформить button |
-| 2b68d86 | style: оформить a |
-| e70de04 | style: оформить button |
-| d31926b | style: оформить svg |
-| a0a1fce | style: оформить button,a,input,textarea,select |
-| 58e6541 | style: оформить button:focus-visible,a:focus-visible |
-| dd99485 | style: оформить input:focus,textarea:focus,select:focus |
-| 0b5842a | style: оформить .brand |
-| b8ff510 | style: оформить .brand-mark |
-| 8991a3d | style: оформить .brand-mark svg |
-| ad22e54 | style: оформить .brand-light |
-| 8706187 | style: оформить .brand-period |
-| 86cf992 | style: оформить .sidebar |
-| 3e03689 | style: оформить .sidebar .brand |
-| 8cf0ab7 | style: оформить .workspace |
-| 83897ef | style: оформить .workspace small,.user-profile small |
-| f92ecb8 | style: оформить .workspace-icon |
-| 32eeeb6 | style: оформить .nav-caption |
-| bab8541 | style: оформить .nav-link |
-| f9f5860 | style: оформить .nav-link.selected |
-| 9f7d818 | style: оформить .nav-link:hover |
-| 469d364 | style: оформить .nav-link.selected:hover |
-| 439bbb7 | style: оформить .nav-link span |
-| a91f450 | style: оформить .nav-link svg |
-| b7c308a | style: оформить .sidebar-note |
-| f28e815 | style: оформить .note-orbit |
-| 3bdc8b1 | style: оформить .sidebar-note h3 |
-| 2ed8de6 | style: оформить .sidebar-note p |
-| 78cbb23 | style: оформить .note-line |
-| 8d457cb | style: оформить .sidebar-bottom |
-| 7551af6 | style: оформить .user-profile |
-| 74c23f1 | style: оформить .user-profile>div |
-| 177091b | style: оформить .avatar |
-| eccea90 | style: оформить .icon-btn |
-| a452a59 | style: оформить .icon-btn:hover |
-| 165af8b | style: оформить .icon-btn svg |
-| e5dfa70 | style: оформить .logout:hover |
-| cf4bd2f | style: оформить .board-main |
-| 0a2c7a8 | style: оформить .workspace-bar |
-| 61dad45 | style: оформить .workspace-bar strong |
-| 9d8e692 | style: оформить .breadcrumb-slash |
-| ea4e874 | style: оформить .private-label |
-| fad510f | style: оформить .private-label svg |
-| 102e94d | style: оформить .board-heading |
-| 8b46b46 | style: оформить .eyebrow |
-| 148a553 | style: оформить h1 |
-| 7002833 | style: оформить .heading-dot |
-| e27e4d8 | style: оформить .board-heading p |
-| 7c95e67 | style: оформить .auth-btn |
-| 64542ce | style: оформить .auth-btn:active |
-| 58d94d2 | style: оформить .primary |
-| f56a73d | style: оформить .primary:hover |
-| b6edb9b | style: оформить .secondary |
-| ca5c868 | style: оформить .secondary:hover |
-| fe4a1d3 | style: оформить .board-overview |
-| ebe79a6 | style: оформить .board-overview>div:first-child |
-| 7a3d2e4 | style: оформить .overview-symbol |
-| 92d36ea | style: оформить .board-overview strong |
-| 3d354ac | style: оформить .board-overview>div>div>span |
-| 15cd8c7 | style: оформить .progress-track |
-| b56bb28 | style: оформить .progress-track span |
-| 8ce9de7 | style: оформить .board-overview>strong |
-| a436aa4 | style: оформить .overview-hint |
-| e53915d | style: оформить .board-toolbar |
-| ffa0c50 | style: оформить .filters |
-| 1003341 | style: оформить .filter |
-| e575602 | style: оформить .filter:hover |
-| b575ae8 | style: оформить .filter.active |
-| 896cae0 | style: оформить .toolbar-right |
-| d7b514c | style: оформить .search-field |
-| 3bfc1d1 | style: оформить .search-field svg |
-| 5e05168 | style: оформить .search-field input |
-| 8e891ee | style: оформить .search-field input:focus |
-| ebb51a0 | style: оформить .search-field:focus-within |
-| 85e5d3f | style: оформить .sort-button |
-| 2e318b9 | style: оформить .sort-button.active |
-| 7c7f5ff | style: оформить #task-list |
-| 2b9996a | style: оформить .board-column |
-| d58a8b6 | style: оформить .in-progress-task |
-| 9734d74 | style: оформить .ended-task |
-| 487c4b6 | style: оформить .column-heading |
-| 64bd27e | style: оформить .column-heading h2 |
-| b490770 | style: оформить .status-dot |
-| b76527e | style: оформить .in-progress-task .status-dot |
-| d581651 | style: оформить .ended-task .status-dot |
-| 31ccc93 | style: оформить .column-count |
-| 3f95356 | style: оформить .in-progress-task .column-count |
-| 40f0d07 | style: оформить .ended-task .column-count |
-| 336e420 | style: оформить .tasks-container |
-| c913e32 | style: оформить .task |
-| 494d91e | style: оформить .task:hover |
-| 99d09d0 | style: оформить .task:active |
-| ebc9240 | style: оформить .task-top |
-| 12d081f | style: оформить .task-id |
-| 4b837a4 | style: оформить .badge |
-| 628464c | style: оформить .badge:before |
-| 5b6ca43 | style: оформить .badge.priority-high |
-| 9271a39 | style: оформить .badge.priority-medium |
-| bc8c2e0 | style: оформить .badge.priority-low |
-| cb5102a | style: оформить .task-text |
-| b630003 | style: оформить .task.done .task-text |
-| 2b5f64a | style: оформить .task-bottom |
-| fdca402 | style: оформить .task-state |
-| 6543b6b | style: оформить .task-state svg |
-| 8bbf3e2 | style: оформить .task-buttons |
-| dda787b | style: оформить .task-btn |
-| ee93695 | style: оформить .task-btn svg |
-| 8b5af43 | style: оформить .task-btn:hover |
-| bb36eb4 | style: оформить .task-btn[data-action=delete]:hover |
-| f0c227f | style: оформить .column-add |
-| 874b2e7 | style: оформить .column-add:hover |
-| 5b9e159 | style: оформить .column-add svg |
-| 3086dae | style: оформить .empty-column |
-| 188b76a | style: оформить .empty-column svg |
-| bc22c54 | style: оформить .empty-column p |
-| 1e0708b | style: оформить .empty-column span |
-| 945cedc | style: оформить .dragging |
-| 82a9519 | style: оформить .drop-hover |
-| 20918ef | style: оформить .board-footnote |
-| fdfa2fc | style: оформить .mini-board svg |
-| 4215759 | style: оформить .board-footnote>span:last-child |
-| 1d5f287 | style: оформить .auth-message |
-| 6af4b9d | style: оформить .is-hidden |
-| 74be492 | style: оформить dialog |
-| e8cb412 | style: оформить dialog::backdrop |
-| 868355d | style: оформить .dialog-heading |
-| 6780796 | style: оформить .dialog-heading h2 |
-| 3130a34 | style: оформить .add-task>label,.form-row label |
-| 8e5ef28 | style: оформить .add-task textarea |
-| fc6ab92 | style: оформить .form-row |
-| 4cc6649 | style: оформить .form-row label |
-| fab38b7 | style: оформить .form-row select |
-| d419461 | style: оформить .dialog-actions |
-| 37aa8a3 | style: оформить .site-header |
-| 2f4f58e | style: оформить .header-caption |
-| 121befb | style: оформить footer |
-| 21ebeef | style: оформить body.page-tasks footer |
-| fdf11bf | style: оформить .auth-layout |
-| 3cc896b | style: оформить .auth-visual |
-| ec40dc6 | style: оформить .auth-visual .eyebrow |
-| 66538b0 | style: оформить .auth-visual h1 |
-| dba8d63 | style: оформить .auth-visual>p |
-| da9344f | style: оформить .auth-visual .visual-caption |
-| 7143802 | style: оформить .mini-preview |
-| b1f555c | style: оформить .mini-lane |
-| babf65a | style: оформить .mini-lane>span |
-| 1939f46 | style: оформить .mini-card |
-| b792427 | style: оформить .mini-card em |
-| 71c6783 | style: оформить .mini-card .mini-done |
-| db7814f | style: оформить .auth-container |
-| 1d14ea6 | style: оформить .auth-title |
-| fdd23b9 | style: оформить .auth-subtitle |
-| cc6c8f5 | style: оформить .auth-table |
-| 0ff9ab9 | style: оформить .auth-table tr,.auth-table td |
-| e42ce7d | style: оформить .auth-table td label |
-| 02d3a7a | style: оформить .auth-table td:has(input) |
-| f6f14c1 | style: оформить .auth-input |
-| c83212b | style: оформить .auth-table .auth-btn |
-| fb08c2e | style: оформить .auth-switch |
-| ce561fd | style: оформить .auth-switch a |
-| ec9b9c3 | style: оформить .account-page |
-| 45f290e | style: оформить .tasks-topbar |
-| 8e2dab1 | style: оформить .topbar-actions |
-| 965e1af | style: оформить .tasks-user |
-| 4ad2673 | style: оформить .account-table tr |
-| b0abafe | style: оформить .account-field |
-| 423e0e3 | style: оформить .account-table td |
-| cd9ad4d | style: оформить .inline |
-| e7c4dad | style: оформить @keyframes card-in |
-| 6307170 | style: адаптировать интерфейс @media(min-width:1650px) |
-| f25a355 | style: адаптировать интерфейс @media(max-width:1150px) |
-| e12bb12 | style: адаптировать интерфейс @media(max-width:800px) |
-| 5e7ea8a | style: адаптировать интерфейс @media(max-width:560px) |
-| 5d38eee | style: адаптировать интерфейс @media(prefers-reduced-motion:reduce) |
-| c0c135d | style: оформить /* Theme controls stay available on the board, auth pages and profile. */ :root |
-| b112e8b | style: оформить .header-actions,.workspace-tools |
-| 58960ee | style: оформить .theme-toggle |
-| be1f916 | style: оформить .theme-toggle:hover |
-| eebd4aa | style: оформить .theme-sun |
-| 935a455 | style: оформить тёмную тему [data-theme=dark] |
-| bf19ae4 | style: оформить тёмную тему [data-theme=dark] .theme-moon |
-| 13dddf3 | style: оформить тёмную тему [data-theme=dark] .theme-sun |
-| 5b3d73f | style: оформить тёмную тему [data-theme=dark] .theme-toggle |
-| ca26985 | style: оформить тёмную тему [data-theme=dark] .theme-toggle:hover |
-| 7f9e094 | style: оформить тёмную тему [data-theme=dark] .workspace-bar |
-| be19a5e | style: оформить тёмную тему [data-theme=dark] .workspace-bar strong |
-| 15f199d | style: оформить тёмную тему [data-theme=dark] .breadcrumb-slash |
-| 492f1bf | style: оформить тёмную тему [data-theme=dark] .eyebrow,[data-theme=dark] .board-heading p |
-| 687a0d0 | style: оформить тёмную тему [data-theme=dark] .board-overview |
-| bcae0df | style: оформить тёмную тему [data-theme=dark] .overview-symbol |
-| e56571a | style: оформить тёмную тему [data-theme=dark] .board-overview>div>div>span,[data-theme=dark] .overview-hint |
-| ebd55ba | style: оформить тёмную тему [data-theme=dark] .progress-track |
-| 7e2cde6 | style: оформить тёмную тему [data-theme=dark] .board-overview>strong |
-| d3a8dc8 | style: оформить тёмную тему [data-theme=dark] .filters |
-| f3fbbcd | style: оформить тёмную тему [data-theme=dark] .filter |
-| 9dcafb0 | style: оформить тёмную тему [data-theme=dark] .filter.active |
-| da1e9c0 | style: оформить тёмную тему [data-theme=dark] .filter:hover |
-| 282ad66 | style: оформить тёмную тему [data-theme=dark] .search-field,[data-theme=dark] .sort-button |
-| 61cae09 | style: оформить тёмную тему [data-theme=dark] .search-field input |
-| 277d2c1 | style: оформить тёмную тему [data-theme=dark] input::placeholder,[data-theme=dark] textarea::placeholder |
-| baf9461 | style: оформить тёмную тему [data-theme=dark] .sort-button.active |
-| 1e9e1ae | style: оформить тёмную тему [data-theme=dark] .board-column |
-| 8e1f1af | style: оформить тёмную тему [data-theme=dark] .in-progress-task |
-| 7175d29 | style: оформить тёмную тему [data-theme=dark] .ended-task |
-| f00da4f | style: оформить тёмную тему [data-theme=dark] .column-count |
-| ff4b813 | style: оформить тёмную тему [data-theme=dark] .in-progress-task .column-count |
-| 65f4f24 | style: оформить тёмную тему [data-theme=dark] .ended-task .column-count |
-| 0c03d5c | style: оформить тёмную тему [data-theme=dark] .task |
-| d122fed | style: оформить тёмную тему [data-theme=dark] .in-progress-task .task |
-| b985d70 | style: оформить тёмную тему [data-theme=dark] .ended-task .task |
-| f11fbf0 | style: оформить тёмную тему [data-theme=dark] .task:hover |
-| 0e7acd0 | style: оформить тёмную тему [data-theme=dark] .task-text |
-| f8a8b80 | style: оформить тёмную тему [data-theme=dark] .task.done .task-text |
-| 346bc47 | style: оформить тёмную тему [data-theme=dark] .task-id |
-| 43695b4 | style: оформить тёмную тему [data-theme=dark] .task-bottom |
-| 57f7ad3 | style: оформить тёмную тему [data-theme=dark] .task-state,[data-theme=dark] .task-btn |
-| 11609bd | style: оформить тёмную тему [data-theme=dark] .task-btn:hover |
-| ca9251a | style: оформить тёмную тему [data-theme=dark] .task-btn[data-action=delete]:hover |
-| 28c8b72 | style: оформить тёмную тему [data-theme=dark] .badge.priority-high |
-| b1241bb | style: оформить тёмную тему [data-theme=dark] .badge.priority-medium |
-| 84232bf | style: оформить тёмную тему [data-theme=dark] .badge.priority-low |
-| bf68f39 | style: оформить тёмную тему [data-theme=dark] .column-add |
-| 4f2c501 | style: оформить тёмную тему [data-theme=dark] .column-add:hover |
-| d5fb086 | style: оформить тёмную тему [data-theme=dark] .empty-column,[data-theme=dark] .empty-column p |
-| 2db1e17 | style: оформить тёмную тему [data-theme=dark] .empty-column svg |
-| 7031815 | style: оформить тёмную тему [data-theme=dark] .board-footnote |
-| 59ecbb5 | style: оформить тёмную тему [data-theme=dark] .drop-hover |
-| c157cb8 | style: оформить тёмную тему [data-theme=dark] .icon-btn:hover |
-| 73e881b | style: оформить тёмную тему [data-theme=dark] .secondary |
-| c38be26 | style: оформить тёмную тему [data-theme=dark] .secondary:hover |
-| 7031088 | style: оформить тёмную тему [data-theme=dark] .auth-message |
-| 3284a7c | style: оформить тёмную тему [data-theme=dark] dialog |
-| 4caa5aa | style: оформить тёмную тему [data-theme=dark] dialog::backdrop |
-| c88b160 | style: оформить тёмную тему [data-theme=dark] .add-task>label,[data-theme=dark] .form-row label |
-| ddda501 | style: оформить тёмную тему [data-theme=dark] .add-task textarea,[data-theme=dark] .form-row select,[data-theme=dark] .auth-input |
-| 6a0345b | style: оформить тёмную тему [data-theme=dark] .auth-layout,[data-theme=dark] .account-page |
-| 8b4bdb6 | style: оформить тёмную тему [data-theme=dark] .auth-visual |
-| 6778851 | style: оформить тёмную тему [data-theme=dark] .auth-visual .eyebrow,[data-theme=dark] .auth-visual>p,[data-theme=dark] .auth-visual .visual-caption |
-| fcbae9c | style: оформить тёмную тему [data-theme=dark] .mini-lane |
-| 2732088 | style: оформить тёмную тему [data-theme=dark] .mini-lane>span |
-| d22b5c7 | style: оформить тёмную тему [data-theme=dark] .mini-card |
-| 5a381c2 | style: оформить тёмную тему [data-theme=dark] .mini-card em |
-| 06a24a2 | style: оформить тёмную тему [data-theme=dark] .mini-card .mini-done |
-| 2bb7b56 | style: оформить тёмную тему [data-theme=dark] .auth-subtitle,[data-theme=dark] .auth-switch,[data-theme=dark] .tasks-user,[data-theme=dark] .account-field,[data-theme=dark] .auth-table td label,[data-theme=dark] .header- |
-| ba66b9a | style: оформить тёмную тему [data-theme=dark] .auth-switch a |
-| cb5b13c | style: оформить тёмную тему [data-theme=dark] footer |
-| 10cc130 | style: адаптировать интерфейс @media(max-width:560px) |
-| f336a94 | style: оформить /* Task details, focus view and denser board. */ .board-heading |
-| 0ca299d | style: оформить .board-heading h1 |
-| ebb5099 | style: оформить .board-overview |
-| 921622f | style: оформить .workspace-bar |
-| da8d4c3 | style: оформить .board-viewbar |
-| 7b1dce9 | style: оформить .view-switch |
-| 90498ce | style: оформить .view-btn |
-| eba7ae7 | style: оформить .view-btn svg |
-| 3a94512 | style: оформить .view-btn.active |
-| 0f68644 | style: оформить .view-btn>span |
-| 3ad7558 | style: оформить .view-date |
-| 724fa39 | style: оформить .board-toolbar |
-| 776298d | style: оформить .filters |
-| 2cc7645 | style: оформить .toolbar-right |
-| 8f401d5 | style: оформить #label-filter |
-| fce9eda | style: оформить .board-column |
-| d57efff | style: оформить .column-heading |
-| 4c2eb34 | style: оформить .task |
-| 2f6679a | style: оформить .task-top |
-| dcfc7f2 | style: оформить .task-open |
-| 532f14d | style: оформить .task-open:hover .task-text |
-| 23b28be | style: оформить .task-text |
-| 4d485e1 | style: оформить .task-description |
-| 2504bf0 | style: оформить .card-labels |
-| 63a3401 | style: оформить .card-labels:empty |
-| 84d7aca | style: оформить .task-label |
-| a30705a | style: оформить .label-green |
-| d9db46a | style: оформить .label-blue |
-| 3e06ff7 | style: оформить .label-purple |
-| 7427a32 | style: оформить .label-orange |
-| f66800a | style: оформить .label-pink |
-| 4e04ca6 | style: оформить .card-details |
-| 68f87fb | style: оформить .card-details:empty |
-| cc33390 | style: оформить .due-badge |
-| 724db9a | style: оформить .due-badge svg,.checklist-summary svg |
-| 9b6c40f | style: оформить .due-badge.is-today |
-| 948a17c | style: оформить .due-badge.is-overdue |
-| dfafb56 | style: оформить .overdue-card |
-| cd3cf18 | style: оформить .checklist-summary |
-| 24eddc0 | style: оформить .card-check-track,.checklist-track |
-| 69eed65 | style: оформить .card-check-track>span,.checklist-track>span |
-| 9c3bcee | style: оформить .task-bottom |
-| 5168d44 | style: оформить .task-buttons |
-| 8607ae0 | style: оформить .task-btn[data-action=complete] |
-| 6d43e30 | style: оформить .task-btn[data-action=complete]:hover |
-| 06590b1 | style: оформить .empty-column |
-| e07e14c | style: оформить .empty-illustration |
-| 9df9a6f | style: оформить .empty-illustration svg |
-| 102af7c | style: оформить .empty-illustration>span |
-| 0df83c8 | style: оформить .ended-task .empty-illustration |
-| a5ffa1e | style: оформить .sidebar-upcoming |
-| a463e6e | style: оформить .upcoming-heading |
-| 1ba2f02 | style: оформить .upcoming-heading>span |
-| 93eb149 | style: оформить .upcoming-item |
-| 3e973d8 | style: оформить .upcoming-item>span:first-child |
-| 7a8e2eb | style: оформить .upcoming-item .due-badge |
-| b5e23ea | style: оформить .upcoming-item .is-overdue |
-| 43ebdcd | style: оформить .upcoming-item:hover>span:first-child |
-| e854609 | style: оформить .upcoming-empty |
-| d0154cf | style: оформить .upcoming-empty svg |
-| ddef8ad | style: оформить .upcoming-empty p |
-| 361d721 | style: оформить .upcoming-empty span |
-| 28835e9 | style: оформить .today-list |
-| b89a83f | style: оформить .today-group |
-| 0c855bd | style: оформить .today-group h2 |
-| fcb057e | style: оформить .today-group h2>span |
-| 35c3d28 | style: оформить .compact-task |
-| 47d3768 | style: оформить .compact-task .task-text |
-| 9aeb860 | style: оформить .compact-task .task-top |
-| a97bf0a | style: оформить .compact-task .task-id |
-| 2488a87 | style: оформить .compact-task .task-open |
-| 077fefe | style: оформить .compact-task .card-details |
-| 80502f1 | style: оформить .compact-task .task-description |
-| 731b387 | style: оформить .compact-task .card-check-track |
-| 8762295 | style: оформить .today-empty |
-| 24b9046 | style: оформить .today-empty>svg |
-| 9f7c7ee | style: оформить .today-empty h2 |
-| 58411f5 | style: оформить .today-empty p |
-| a8d75a9 | style: оформить .task-drawer |
-| fc24aec | style: оформить .task-drawer[open] |
-| 07f2493 | style: оформить .task-drawer::backdrop |
-| 2f5807b | style: оформить .task-drawer .dialog-heading |
-| 6c92b98 | style: оформить .task-drawer .dialog-heading h2 |
-| 7eb302d | style: оформить .task-drawer #dialog-message |
-| 6bc495b | style: оформить .task-drawer .add-task |
-| 70d666c | style: оформить .drawer-body |
-| f84b6f0 | style: оформить .drawer-body>label,.deadline-field>label |
-| a4ed73f | style: оформить .optional |
-| 40261fd | style: оформить .task-drawer textarea |
-| 947daee | style: оформить .task-drawer #task-description |
-| 4032337 | style: оформить .deadline-field |
-| 7bc152f | style: оформить .due-input-row |
-| 21fd535 | style: оформить .due-input-row input,.label-entry input,.label-entry select,.checklist-entry input |
-| 548a11a | style: оформить .due-input-row input |
-| 27cf8bc | style: оформить .text-btn |
-| 519ddc3 | style: оформить .text-btn:hover |
-| 1ae9c66 | style: оформить .date-shortcuts,.label-presets |
-| a9fbc70 | style: оформить .date-shortcuts button,.label-presets button |
-| f38cbf0 | style: оформить .date-shortcuts button:hover,.label-presets button:hover |
-| d7c0fe5 | style: оформить .details-section |
-| 5f52544 | style: оформить .details-section h3 |
-| 30cdbaf | style: оформить .details-section h3>span |
-| bc60824 | style: оформить .label-chips |
-| f142d30 | style: оформить .label-chips .task-label |
-| 5019409 | style: оформить .task-label button |
-| fa2f97e | style: оформить .label-entry |
-| 26af397 | style: оформить .label-entry input |
-| c1ea7f8 | style: оформить .label-entry select |
-| 86b3a2d | style: оформить .label-entry .icon-btn,.checklist-entry .icon-btn |
-| e941679 | style: оформить .checklist-entry |
-| ba5ddea | style: оформить .checklist-entry input |
-| e3b16e3 | style: оформить .checklist-row |
-| fb74d79 | style: оформить .checklist-row input[type=checkbox] |
-| f1609c3 | style: оформить .checklist-row input[type=text] |
-| e473759 | style: оформить .checklist-row input[type=text]:hover |
-| a286605 | style: оформить .checklist-row.checked input[type=text] |
-| 515e3cb | style: оформить .task-drawer .dialog-actions |
-| 55f842f | style: оформить .save-hint |
-| 47d1a6a | style: оформить .task-drawer .dialog-actions .auth-btn |
-| 4af18e1 | style: оформить .checklist-track |
-| 4328217 | style: оформить тёмную тему [data-theme=dark] .view-btn |
-| 9df3da1 | style: оформить тёмную тему [data-theme=dark] .view-btn.active |
-| ff1b6f0 | style: оформить тёмную тему [data-theme=dark] .view-btn>span |
-| 517e0f3 | style: оформить тёмную тему [data-theme=dark] .view-date |
-| 833496b | style: оформить тёмную тему [data-theme=dark] #label-filter |
-| 322d424 | style: оформить тёмную тему [data-theme=dark] .task-open:hover .task-text |
-| 58325de | style: оформить тёмную тему [data-theme=dark] .task-description |
-| fcef0ba | style: оформить тёмную тему [data-theme=dark] .label-green |
-| 8039511 | style: оформить тёмную тему [data-theme=dark] .label-blue |
-| bd12e4c | style: оформить тёмную тему [data-theme=dark] .label-purple |
-| d13a156 | style: оформить тёмную тему [data-theme=dark] .label-orange |
-| db90c07 | style: оформить тёмную тему [data-theme=dark] .label-pink |
-| 741dbe5 | style: оформить тёмную тему [data-theme=dark] .due-badge,[data-theme=dark] .checklist-summary |
-| 5bfabf8 | style: оформить тёмную тему [data-theme=dark] .due-badge.is-overdue |
-| b67ad7d | style: оформить тёмную тему [data-theme=dark] .due-badge.is-today |
-| 572f892 | style: оформить тёмную тему [data-theme=dark] .overdue-card |
-| df98e07 | style: оформить тёмную тему [data-theme=dark] .card-check-track,[data-theme=dark] .checklist-track |
-| 16ec72d | style: оформить тёмную тему [data-theme=dark] .task-btn[data-action=complete] |
-| 9d907b3 | style: оформить тёмную тему [data-theme=dark] .task-btn[data-action=complete]:hover |
-| 10dfc4a | style: оформить тёмную тему [data-theme=dark] .empty-illustration |
-| 650f6cd | style: оформить тёмную тему [data-theme=dark] .empty-illustration svg |
-| c8b29db | style: оформить тёмную тему [data-theme=dark] .empty-illustration>span |
-| a65c982 | style: оформить тёмную тему [data-theme=dark] .today-group h2 |
-| ea0feb3 | style: оформить тёмную тему [data-theme=dark] .today-group h2>span |
-| ceae4eb | style: оформить тёмную тему [data-theme=dark] .today-empty |
-| 6464b18 | style: оформить тёмную тему [data-theme=dark] .today-empty h2 |
-| 6a4b6ce | style: оформить тёмную тему [data-theme=dark] .task-drawer::backdrop |
-| 51f59a3 | style: оформить тёмную тему [data-theme=dark] .drawer-body>label,[data-theme=dark] .deadline-field>label,[data-theme=dark] .details-section h3 |
-| 120cacd | style: оформить тёмную тему [data-theme=dark] .due-input-row input,[data-theme=dark] .label-entry input,[data-theme=dark] .label-entry select,[data-theme=dark] .checklist-entry input |
-| 6541e80 | style: оформить тёмную тему [data-theme=dark] .date-shortcuts button,[data-theme=dark] .label-presets button |
-| 5c3097e | style: оформить тёмную тему [data-theme=dark] .checklist-row input[type=text] |
-| d910938 | style: оформить тёмную тему [data-theme=dark] .checklist-row.checked input[type=text] |
-| 37a74f1 | style: оформить тёмную тему [data-theme=dark] .text-btn |
-| 5b8f1cd | style: оформить тёмную тему [data-theme=dark] .optional,[data-theme=dark] .save-hint |
-| a8d3bcc | style: адаптировать интерфейс @media(min-width:1650px) |
-| 2378b68 | style: адаптировать интерфейс @media(max-width:1150px) |
-| 4ebdbcf | style: адаптировать интерфейс @media(max-width:800px) |
-| 00874ea | style: адаптировать интерфейс @media(max-width:560px) |
-| d931281 | assets: добавить изображение ArrowLeft.webp |
-| ff8c640 | assets: добавить изображение ArrowRight.webp |
-| 5ed437c | assets: добавить изображение CheckMark.webp |
-| 95ec784 | assets: добавить изображение Pen.webp |
-| eb1612c | assets: добавить изображение Save.webp |
-| f275b35 | assets: добавить изображение Trashcan.webp |
-| a152e3b | docker: исключить секреты и локальные файлы из образа |
-| 60e386c | docker: собрать PHP с Apache и PDO MySQL |
-| 68a4797 | docker: настроить приложение, MySQL и миграции |
-| de0cddd | test: добавить проверку синтаксиса PHP |
-| 7e5a069 | test: проверить авторизацию, задачи и изоляцию пользователей |
-| 2b1fc59 | ci: запускать сборку, миграции и HTTP-проверки на GitHub |
-| 0e305f1 | docs: сохранить результаты аудита проекта |
-| 1161343 | docs: описать идеи развития приложения |
-| 71ff670 | docs: описать пользовательский сценарий срочной задачи |
-| 3f83c46 | docs: добавить полную инструкцию запуска и отметить восстановленную историю |
+| 8ba5234 | docs: описать проект и восстановление истории разработки |
+| 24075b2 | chore: исключить пароли, локальную базу, архивы и временные файлы |
+| 68b62d0 | chore: настроить окончания строк и бинарные изображения |
+| a3edd4f | config: добавить образец настроек без личных секретов |
+| 1816c4b | config: загрузить настройки окружения и подключение PDO |
+| 95e743a | security: добавить сессии, CSRF и общие функции авторизации |
+| 7755a66 | db: создать таблицы пользователей и задач |
+| 2f96fd1 | db: добавить запуск и журнал миграций |
+| ca156a9 | setup: генерировать локальные настройки со случайными паролями |
+| 01f9306 | ui: добавить набор SVG-иконок |
+| 6f5be71 | ui: добавить кнопку переключения темы |
+| 32807c7 | ui: добавить шапку с логотипом |
+| d696159 | ui: добавить подвал страницы |
+| c533af1 | ui: добавить иллюстрацию страниц авторизации |
+| 237350c | routing: добавить страницу неизвестного адреса |
+| 59cfb8b | feat: добавить серверную обработку регистрации |
+| c3b47f8 | ui: добавить разметку регистрации |
+| b4d4586 | feat: добавить серверную обработку входа |
+| cc75881 | ui: добавить разметку входа |
+| e0d1d1f | feat: добавить серверную обработку личного кабинета |
+| 7e04ad0 | ui: добавить разметку личного кабинета |
+| 2fa1469 | feat: добавить серверную обработку доски задач |
+| 4fe446c | ui: добавить разметку доски задач |
+| 9051f64 | routing: собрать страницы через общий вход и шаблон |
+| 1b257c9 | db: добавить описание, сроки, метки и чек-листы |
+| d8dc9f0 | api: добавить операции с задачами и проверку владельца |
+| 72d5cb1 | board: добавить блок поведения 1 |
+| dab3874 | board: добавить config |
+| 2268adc | board: добавить dialog |
+| 7a6a4a3 | board: добавить status |
+| 9deca6b | board: добавить sections |
+| 3cc376a | board: добавить tasks |
+| 30bafcb | board: добавить labels |
+| 7bb9eb3 | board: добавить paths |
+| fa7cea3 | board: добавить icon |
+| 7a6f89b | board: добавить escape |
+| 07dc857 | board: добавить localDate |
+| 54ad86e | board: добавить overdue |
+| c379c0c | board: добавить dateInfo |
+| d20c293 | board: добавить labelsHtml |
+| 93111ca | board: добавить message |
+| b63f0d7 | board: добавить clearMessages |
+| 6085e07 | board: добавить draft |
+| f9ae1e7 | board: добавить closeEditor |
+| 3fd165e | board: добавить openEditor |
+| 2d445c4 | board: обработать click для button |
+| 16e7783 | board: обработать click для close-dialog |
+| 10191b0 | board: обработать cancel для dialog |
+| b710807 | board: обработать close для dialog |
+| 5682438 | board: добавить renderEditorLabels |
+| b6d4c2e | board: добавить addLabel |
+| 58b477f | board: обработать click для add-label |
+| 282500b | board: обработать keydown для label-name |
+| f5c0565 | board: добавить b |
+| aeb7b9c | board: обработать click для b |
+| 6889064 | board: добавить renderChecklist |
+| cee3aff | board: добавить addChecklist |
+| ef391e7 | board: обработать click для add-checklist |
+| b6a12bb | board: обработать keydown для checklist-input |
+| 1fc0408 | board: обработать input для editor-checklist |
+| 15a0232 | board: обработать change для editor-checklist |
+| 484375e | board: добавить b |
+| 3092d24 | board: обработать keydown для editor-checklist |
+| d96d9c4 | board: обработать click для clear-due |
+| 5508969 | board: обработать click для b |
+| a2c23ec | board: добавить request |
+| 4cb93f3 | board: добавить sync |
+| c3920e9 | board: добавить makeCard |
+| 8dbc17d | board: добавить renderUpcoming |
+| 1c229df | board: добавить render |
+| a573ac8 | board: обработать submit для form |
+| d0f5d8e | board: добавить cardAction |
+| b6742b7 | board: обработать click для task-list |
+| 4ac8565 | board: добавить b |
+| 5f8092d | board: добавить блок поведения 2 |
+| ef5cd38 | board: обработать click для b |
+| 2c994c5 | board: обработать click для b |
+| 15168c2 | board: обработать input для task-search |
+| a1df687 | board: обработать click для priority-sort-btn |
+| 3bc6934 | board: обработать visibilitychange для document |
+| 9672452 | board: добавить блок поведения 3 |
+| 197ed22 | board: добавить блок поведения 4 |
+| 8ebf326 | theme: сохранять выбор светлой и тёмной темы в браузере |
+| f0d1a5b | style: подключить шрифт Manrope с нужными начертаниями |
+| c35422d | style: оформить :root |
+| a949d42 | style: оформить * |
+| 8d1a0fe | style: задать фон, цвет и базовые размеры текста страницы |
+| 253e10c | style: применить Manrope и резервные системные шрифты |
+| 309c1a8 | style: оформить button,input,select,textarea |
+| 6b90143 | style: оформить button,a,input,textarea,select |
+| 42241af | style: оформить button,a |
+| a3e2996 | style: оформить button |
+| 9000372 | style: оформить a |
+| 9a2b1b1 | style: оформить button |
+| cfc1527 | style: оформить svg |
+| 691f732 | style: оформить button,a,input,textarea,select |
+| a4e88c0 | style: оформить button:focus-visible,a:focus-visible |
+| a36ef57 | style: оформить input:focus,textarea:focus,select:focus |
+| 53f9334 | style: оформить .brand |
+| 6c9140b | style: оформить .brand-mark |
+| d589e14 | style: оформить .brand-mark svg |
+| 8aaec09 | style: оформить .brand-light |
+| 6dad60d | style: оформить .brand-period |
+| 3ddbf1e | style: оформить .sidebar |
+| 5dd40e9 | style: оформить .sidebar .brand |
+| e520628 | style: оформить .workspace |
+| 81a5e12 | style: оформить .workspace small,.user-profile small |
+| c302b12 | style: оформить .workspace-icon |
+| c305935 | style: оформить .nav-caption |
+| 3731326 | style: оформить .nav-link |
+| da5fa77 | style: оформить .nav-link.selected |
+| 834e5ac | style: оформить .nav-link:hover |
+| b6bfc40 | style: оформить .nav-link.selected:hover |
+| 37ddf6f | style: оформить .nav-link span |
+| 8728a5a | style: оформить .nav-link svg |
+| 835a276 | style: оформить .sidebar-note |
+| 93f5933 | style: оформить .note-orbit |
+| 322ae39 | style: оформить .sidebar-note h3 |
+| 62ee87a | style: оформить .sidebar-note p |
+| 685d8eb | style: оформить .note-line |
+| e0cbb00 | style: оформить .sidebar-bottom |
+| b9aa7bd | style: оформить .user-profile |
+| 51ce2f3 | style: оформить .user-profile>div |
+| ec2120a | style: оформить .avatar |
+| 9d4956b | style: оформить .icon-btn |
+| ed71f6b | style: оформить .icon-btn:hover |
+| 79c32e9 | style: оформить .icon-btn svg |
+| ac52794 | style: оформить .logout:hover |
+| 7799f18 | style: оформить .board-main |
+| c03f4ce | style: оформить .workspace-bar |
+| 3b11cbe | style: оформить .workspace-bar strong |
+| 07de9c6 | style: оформить .breadcrumb-slash |
+| 5e285df | style: оформить .private-label |
+| 809ff4a | style: оформить .private-label svg |
+| 358192a | style: оформить .board-heading |
+| ae74ea2 | style: оформить .eyebrow |
+| f6212be | style: оформить h1 |
+| 443ff29 | style: оформить .heading-dot |
+| 4f05a07 | style: оформить .board-heading p |
+| ee0f566 | style: оформить .auth-btn |
+| d06cb01 | style: оформить .auth-btn:active |
+| 016b195 | style: оформить .primary |
+| 855d9a2 | style: оформить .primary:hover |
+| 6fe9f72 | style: оформить .secondary |
+| 3fb33ed | style: оформить .secondary:hover |
+| 2a453d9 | style: оформить .board-overview |
+| d0f27e7 | style: оформить .board-overview>div:first-child |
+| 68e401d | style: оформить .overview-symbol |
+| df553a5 | style: оформить .board-overview strong |
+| c210490 | style: оформить .board-overview>div>div>span |
+| b6a80f2 | style: оформить .progress-track |
+| f6b12ed | style: оформить .progress-track span |
+| e50b321 | style: оформить .board-overview>strong |
+| 84fba84 | style: оформить .overview-hint |
+| 01fe39c | style: оформить .board-toolbar |
+| f49a94b | style: оформить .filters |
+| 2ddb988 | style: оформить .filter |
+| 759fa9b | style: оформить .filter:hover |
+| b89514e | style: оформить .filter.active |
+| 5157fe9 | style: оформить .toolbar-right |
+| 153c934 | style: оформить .search-field |
+| 4db403a | style: оформить .search-field svg |
+| 067f694 | style: оформить .search-field input |
+| 55f5af7 | style: оформить .search-field input:focus |
+| 4434a59 | style: оформить .search-field:focus-within |
+| 78d8fb6 | style: оформить .sort-button |
+| f394b4a | style: оформить .sort-button.active |
+| f7c9634 | style: оформить #task-list |
+| 9029616 | style: оформить .board-column |
+| 1cec8c9 | style: оформить .in-progress-task |
+| 61f4fae | style: оформить .ended-task |
+| e8f50c5 | style: оформить .column-heading |
+| 8a49971 | style: оформить .column-heading h2 |
+| c6ea79b | style: оформить .status-dot |
+| 0b68c00 | style: оформить .in-progress-task .status-dot |
+| fabe21b | style: оформить .ended-task .status-dot |
+| fe7ebe7 | style: оформить .column-count |
+| 984c625 | style: оформить .in-progress-task .column-count |
+| 3f4e17d | style: оформить .ended-task .column-count |
+| c635569 | style: оформить .tasks-container |
+| 00a4c97 | style: оформить .task |
+| 5b66b31 | style: оформить .task:hover |
+| 7a2e95e | style: оформить .task:active |
+| 9437e9a | style: оформить .task-top |
+| f878a86 | style: оформить .task-id |
+| 3a8b1eb | style: оформить .badge |
+| 6bded67 | style: оформить .badge:before |
+| b2b2b9f | style: оформить .badge.priority-high |
+| 22e83e5 | style: оформить .badge.priority-medium |
+| 71ebf81 | style: оформить .badge.priority-low |
+| c8481ce | style: оформить .task-text |
+| 8f36600 | style: оформить .task.done .task-text |
+| 7fac031 | style: оформить .task-bottom |
+| fa152c7 | style: оформить .task-state |
+| 3f06351 | style: оформить .task-state svg |
+| 6d2ecad | style: оформить .task-buttons |
+| bc194e5 | style: оформить .task-btn |
+| f4ed798 | style: оформить .task-btn svg |
+| a5bd628 | style: оформить .task-btn:hover |
+| 23d1faf | style: оформить .task-btn[data-action=delete]:hover |
+| 634ae05 | style: оформить .column-add |
+| d1fd58b | style: оформить .column-add:hover |
+| 1346cfd | style: оформить .column-add svg |
+| d63764a | style: оформить .empty-column |
+| f59bae1 | style: оформить .empty-column svg |
+| 4b242f7 | style: оформить .empty-column p |
+| 1c7ce1c | style: оформить .empty-column span |
+| b5ecd52 | style: оформить .dragging |
+| 150dd95 | style: оформить .drop-hover |
+| a75ef0a | style: оформить .board-footnote |
+| 898f771 | style: оформить .mini-board svg |
+| 4cf4eb0 | style: оформить .board-footnote>span:last-child |
+| 022dd6b | style: оформить .auth-message |
+| 3dbe896 | style: оформить .is-hidden |
+| 7695dcc | style: оформить dialog |
+| 0aa3441 | style: оформить dialog::backdrop |
+| e5277fd | style: оформить .dialog-heading |
+| 684392c | style: оформить .dialog-heading h2 |
+| fc9e016 | style: оформить .add-task>label,.form-row label |
+| ebd6612 | style: оформить .add-task textarea |
+| 7d8d112 | style: оформить .form-row |
+| 03976c1 | style: оформить .form-row label |
+| 8e69e4d | style: оформить .form-row select |
+| 0d07c78 | style: оформить .dialog-actions |
+| b0290ff | style: оформить .site-header |
+| c9510bb | style: оформить .header-caption |
+| 29c2003 | style: оформить footer |
+| 33e81d0 | style: оформить body.page-tasks footer |
+| 4d68d62 | style: оформить .auth-layout |
+| 3b22871 | style: оформить .auth-visual |
+| eb8340e | style: оформить .auth-visual .eyebrow |
+| b0ce711 | style: оформить .auth-visual h1 |
+| 182204f | style: оформить .auth-visual>p |
+| 826e868 | style: оформить .auth-visual .visual-caption |
+| 7b3b875 | style: оформить .mini-preview |
+| 0d4b27a | style: оформить .mini-lane |
+| aeff976 | style: оформить .mini-lane>span |
+| 038a422 | style: оформить .mini-card |
+| 6d0974b | style: оформить .mini-card em |
+| 11b44c5 | style: оформить .mini-card .mini-done |
+| e271552 | style: оформить .auth-container |
+| 8a05b45 | style: оформить .auth-title |
+| 022f520 | style: оформить .auth-subtitle |
+| 4e614b8 | style: оформить .auth-table |
+| 87c9131 | style: оформить .auth-table tr,.auth-table td |
+| adf6cb7 | style: оформить .auth-table td label |
+| 64b690e | style: оформить .auth-table td:has(input) |
+| c5062a7 | style: оформить .auth-input |
+| 7606143 | style: оформить .auth-table .auth-btn |
+| 1e50530 | style: оформить .auth-switch |
+| 43f1045 | style: оформить .auth-switch a |
+| 9543fbc | style: оформить .account-page |
+| 206e70c | style: оформить .tasks-topbar |
+| 8faac88 | style: оформить .topbar-actions |
+| c473f60 | style: оформить .tasks-user |
+| fdde335 | style: оформить .account-table tr |
+| b4d892c | style: оформить .account-field |
+| cc373aa | style: оформить .account-table td |
+| fed976d | style: оформить .inline |
+| 0e9af97 | style: оформить @keyframes card-in |
+| 7eebcf1 | style: адаптировать интерфейс @media(min-width:1650px) |
+| 887e736 | style: адаптировать интерфейс @media(max-width:1150px) |
+| 2dc67a9 | style: адаптировать интерфейс @media(max-width:800px) |
+| af41fb3 | style: адаптировать интерфейс @media(max-width:560px) |
+| cbafb8e | style: адаптировать интерфейс @media(prefers-reduced-motion:reduce) |
+| 1ed2144 | style: оформить /* Theme controls stay available on the board, auth pages and profile. */ :root |
+| 80eb887 | style: оформить .header-actions,.workspace-tools |
+| e90fc38 | style: оформить .theme-toggle |
+| 673041c | style: оформить .theme-toggle:hover |
+| e831848 | style: оформить .theme-sun |
+| e69d4d7 | style: оформить тёмную тему [data-theme=dark] |
+| 09c64b1 | style: оформить тёмную тему [data-theme=dark] .theme-moon |
+| 28740ff | style: оформить тёмную тему [data-theme=dark] .theme-sun |
+| 6ec99ad | style: оформить тёмную тему [data-theme=dark] .theme-toggle |
+| 8551d47 | style: оформить тёмную тему [data-theme=dark] .theme-toggle:hover |
+| e64d97e | style: оформить тёмную тему [data-theme=dark] .workspace-bar |
+| 3f6a9d7 | style: оформить тёмную тему [data-theme=dark] .workspace-bar strong |
+| 8a7c161 | style: оформить тёмную тему [data-theme=dark] .breadcrumb-slash |
+| 054d6e1 | style: оформить тёмную тему [data-theme=dark] .eyebrow,[data-theme=dark] .board-heading p |
+| 023c793 | style: оформить тёмную тему [data-theme=dark] .board-overview |
+| 341f66d | style: оформить тёмную тему [data-theme=dark] .overview-symbol |
+| 58a25eb | style: оформить тёмную тему [data-theme=dark] .board-overview>div>div>span,[data-theme=dark] .overview-hint |
+| de34eb9 | style: оформить тёмную тему [data-theme=dark] .progress-track |
+| f85032f | style: оформить тёмную тему [data-theme=dark] .board-overview>strong |
+| f5019bd | style: оформить тёмную тему [data-theme=dark] .filters |
+| 0e5d526 | style: оформить тёмную тему [data-theme=dark] .filter |
+| 67a9a30 | style: оформить тёмную тему [data-theme=dark] .filter.active |
+| f698542 | style: оформить тёмную тему [data-theme=dark] .filter:hover |
+| 58b3858 | style: оформить тёмную тему [data-theme=dark] .search-field,[data-theme=dark] .sort-button |
+| ff4d539 | style: оформить тёмную тему [data-theme=dark] .search-field input |
+| b707e99 | style: оформить тёмную тему [data-theme=dark] input::placeholder,[data-theme=dark] textarea::placeholder |
+| 10c5eb4 | style: оформить тёмную тему [data-theme=dark] .sort-button.active |
+| 5c6498d | style: оформить тёмную тему [data-theme=dark] .board-column |
+| ce93873 | style: оформить тёмную тему [data-theme=dark] .in-progress-task |
+| 8e3092f | style: оформить тёмную тему [data-theme=dark] .ended-task |
+| 3280ca2 | style: оформить тёмную тему [data-theme=dark] .column-count |
+| 519ee24 | style: оформить тёмную тему [data-theme=dark] .in-progress-task .column-count |
+| 298cfae | style: оформить тёмную тему [data-theme=dark] .ended-task .column-count |
+| e77e4bd | style: оформить тёмную тему [data-theme=dark] .task |
+| 1b8cbc3 | style: оформить тёмную тему [data-theme=dark] .in-progress-task .task |
+| 02d7406 | style: оформить тёмную тему [data-theme=dark] .ended-task .task |
+| 31d7538 | style: оформить тёмную тему [data-theme=dark] .task:hover |
+| 71712a5 | style: оформить тёмную тему [data-theme=dark] .task-text |
+| e3cdae7 | style: оформить тёмную тему [data-theme=dark] .task.done .task-text |
+| 89dab02 | style: оформить тёмную тему [data-theme=dark] .task-id |
+| d224eed | style: оформить тёмную тему [data-theme=dark] .task-bottom |
+| 34a0cfd | style: оформить тёмную тему [data-theme=dark] .task-state,[data-theme=dark] .task-btn |
+| 3c5c2d6 | style: оформить тёмную тему [data-theme=dark] .task-btn:hover |
+| fe7c26e | style: оформить тёмную тему [data-theme=dark] .task-btn[data-action=delete]:hover |
+| 20cb2b6 | style: оформить тёмную тему [data-theme=dark] .badge.priority-high |
+| bfd81eb | style: оформить тёмную тему [data-theme=dark] .badge.priority-medium |
+| 5a8b385 | style: оформить тёмную тему [data-theme=dark] .badge.priority-low |
+| e5a695b | style: оформить тёмную тему [data-theme=dark] .column-add |
+| 514860d | style: оформить тёмную тему [data-theme=dark] .column-add:hover |
+| d733d2b | style: оформить тёмную тему [data-theme=dark] .empty-column,[data-theme=dark] .empty-column p |
+| 4f490cb | style: оформить тёмную тему [data-theme=dark] .empty-column svg |
+| e5d7a5e | style: оформить тёмную тему [data-theme=dark] .board-footnote |
+| abc4605 | style: оформить тёмную тему [data-theme=dark] .drop-hover |
+| 95ef000 | style: оформить тёмную тему [data-theme=dark] .icon-btn:hover |
+| be1e7b8 | style: оформить тёмную тему [data-theme=dark] .secondary |
+| 690c0bc | style: оформить тёмную тему [data-theme=dark] .secondary:hover |
+| dfd07ba | style: оформить тёмную тему [data-theme=dark] .auth-message |
+| 44ae0cd | style: оформить тёмную тему [data-theme=dark] dialog |
+| 86b5961 | style: оформить тёмную тему [data-theme=dark] dialog::backdrop |
+| e584e45 | style: оформить тёмную тему [data-theme=dark] .add-task>label,[data-theme=dark] .form-row label |
+| dcbfb64 | style: оформить тёмную тему [data-theme=dark] .add-task textarea,[data-theme=dark] .form-row select,[data-theme=dark] .auth-input |
+| 916f757 | style: оформить тёмную тему [data-theme=dark] .auth-layout,[data-theme=dark] .account-page |
+| bd80c3b | style: оформить тёмную тему [data-theme=dark] .auth-visual |
+| e1054d5 | style: оформить тёмную тему [data-theme=dark] .auth-visual .eyebrow,[data-theme=dark] .auth-visual>p,[data-theme=dark] .auth-visual .visual-caption |
+| 9840628 | style: оформить тёмную тему [data-theme=dark] .mini-lane |
+| 020efae | style: оформить тёмную тему [data-theme=dark] .mini-lane>span |
+| 76eebf0 | style: оформить тёмную тему [data-theme=dark] .mini-card |
+| 4394d8d | style: оформить тёмную тему [data-theme=dark] .mini-card em |
+| 23993eb | style: оформить тёмную тему [data-theme=dark] .mini-card .mini-done |
+| e4162a4 | style: оформить тёмную тему [data-theme=dark] .auth-subtitle,[data-theme=dark] .auth-switch,[data-theme=dark] .tasks-user,[data-theme=dark] .account-field,[data-theme=dark] .auth-table td label,[data-theme=dark] .header- |
+| b942bbd | style: оформить тёмную тему [data-theme=dark] .auth-switch a |
+| c92153f | style: оформить тёмную тему [data-theme=dark] footer |
+| 06ccad0 | style: адаптировать интерфейс @media(max-width:560px) |
+| 05e83ee | style: оформить /* Task details, focus view and denser board. */ .board-heading |
+| 713868f | style: оформить .board-heading h1 |
+| 2bab228 | style: оформить .board-overview |
+| 357ac8c | style: оформить .workspace-bar |
+| b3de30f | style: оформить .board-viewbar |
+| 6224fc8 | style: оформить .view-switch |
+| 9803288 | style: оформить .view-btn |
+| a2c6b02 | style: оформить .view-btn svg |
+| 809b2f2 | style: оформить .view-btn.active |
+| 149f61d | style: оформить .view-btn>span |
+| 5fca2ba | style: оформить .view-date |
+| 2a98706 | style: оформить .board-toolbar |
+| 4bd1f70 | style: оформить .filters |
+| c38f7b3 | style: оформить .toolbar-right |
+| 5a389b4 | style: оформить #label-filter |
+| 0520cdc | style: оформить .board-column |
+| fb25bcc | style: оформить .column-heading |
+| 45c5e90 | style: оформить .task |
+| e6409a3 | style: оформить .task-top |
+| d355827 | style: оформить .task-open |
+| b05a5a3 | style: оформить .task-open:hover .task-text |
+| 901ff76 | style: оформить .task-text |
+| c4381b2 | style: оформить .task-description |
+| 60f7007 | style: оформить .card-labels |
+| 4a48f86 | style: оформить .card-labels:empty |
+| e7da092 | style: оформить .task-label |
+| 3607388 | style: оформить .label-green |
+| fd5c245 | style: оформить .label-blue |
+| 79b0b09 | style: оформить .label-purple |
+| 08fd473 | style: оформить .label-orange |
+| 70e2e55 | style: оформить .label-pink |
+| 8e46e60 | style: оформить .card-details |
+| 912635f | style: оформить .card-details:empty |
+| 11647fe | style: оформить .due-badge |
+| 11adf30 | style: оформить .due-badge svg,.checklist-summary svg |
+| 38390d8 | style: оформить .due-badge.is-today |
+| 4a05358 | style: оформить .due-badge.is-overdue |
+| 5b2d267 | style: оформить .overdue-card |
+| e1759b9 | style: оформить .checklist-summary |
+| f6e6b44 | style: оформить .card-check-track,.checklist-track |
+| d9a6e28 | style: оформить .card-check-track>span,.checklist-track>span |
+| 0915236 | style: оформить .task-bottom |
+| 04ea305 | style: оформить .task-buttons |
+| 3b9c59f | style: оформить .task-btn[data-action=complete] |
+| 849ac8c | style: оформить .task-btn[data-action=complete]:hover |
+| ed85868 | style: оформить .empty-column |
+| 2a0697e | style: оформить .empty-illustration |
+| 139d15f | style: оформить .empty-illustration svg |
+| 3a51c5d | style: оформить .empty-illustration>span |
+| 15cce00 | style: оформить .ended-task .empty-illustration |
+| 9d69613 | style: оформить .sidebar-upcoming |
+| cac0326 | style: оформить .upcoming-heading |
+| b7e3a1a | style: оформить .upcoming-heading>span |
+| 3420614 | style: оформить .upcoming-item |
+| 71d9fe6 | style: оформить .upcoming-item>span:first-child |
+| 731d10d | style: оформить .upcoming-item .due-badge |
+| 916c995 | style: оформить .upcoming-item .is-overdue |
+| 1126150 | style: оформить .upcoming-item:hover>span:first-child |
+| 6b5b85c | style: оформить .upcoming-empty |
+| 7381bb7 | style: оформить .upcoming-empty svg |
+| b38eb53 | style: оформить .upcoming-empty p |
+| bbbb5ce | style: оформить .upcoming-empty span |
+| dabaffc | style: оформить .today-list |
+| b9bb59e | style: оформить .today-group |
+| 0b18a8e | style: оформить .today-group h2 |
+| 819a117 | style: оформить .today-group h2>span |
+| 47db84a | style: оформить .compact-task |
+| 44a5726 | style: оформить .compact-task .task-text |
+| 2b9ec15 | style: оформить .compact-task .task-top |
+| 0f89499 | style: оформить .compact-task .task-id |
+| 2b85ca7 | style: оформить .compact-task .task-open |
+| 40c8aec | style: оформить .compact-task .card-details |
+| 98c7bd7 | style: оформить .compact-task .task-description |
+| c2a2cbe | style: оформить .compact-task .card-check-track |
+| 116737d | style: оформить .today-empty |
+| 406ccba | style: оформить .today-empty>svg |
+| 5815568 | style: оформить .today-empty h2 |
+| 5cecf7d | style: оформить .today-empty p |
+| 498c37d | style: оформить .task-drawer |
+| d1056a5 | style: оформить .task-drawer[open] |
+| 63fa923 | style: оформить .task-drawer::backdrop |
+| b977a2d | style: оформить .task-drawer .dialog-heading |
+| 43f9cab | style: оформить .task-drawer .dialog-heading h2 |
+| 12bd065 | style: оформить .task-drawer #dialog-message |
+| ecddb06 | style: оформить .task-drawer .add-task |
+| 555f166 | style: оформить .drawer-body |
+| 429f0eb | style: оформить .drawer-body>label,.deadline-field>label |
+| a2a19c4 | style: оформить .optional |
+| 810c560 | style: оформить .task-drawer textarea |
+| 49e8cab | style: оформить .task-drawer #task-description |
+| c9b057b | style: оформить .deadline-field |
+| bb0402d | style: оформить .due-input-row |
+| da642ac | style: оформить .due-input-row input,.label-entry input,.label-entry select,.checklist-entry input |
+| df7ce50 | style: оформить .due-input-row input |
+| 44874fd | style: оформить .text-btn |
+| f7cb929 | style: оформить .text-btn:hover |
+| 5e1f4ae | style: оформить .date-shortcuts,.label-presets |
+| 485ed4d | style: оформить .date-shortcuts button,.label-presets button |
+| dc48f72 | style: оформить .date-shortcuts button:hover,.label-presets button:hover |
+| 8663b26 | style: оформить .details-section |
+| 31ef5d3 | style: оформить .details-section h3 |
+| 45571ac | style: оформить .details-section h3>span |
+| a7c6a5f | style: оформить .label-chips |
+| 488a804 | style: оформить .label-chips .task-label |
+| 349ab02 | style: оформить .task-label button |
+| 9a8ced8 | style: оформить .label-entry |
+| 16d2a34 | style: оформить .label-entry input |
+| b5089ae | style: оформить .label-entry select |
+| 3b9ffbf | style: оформить .label-entry .icon-btn,.checklist-entry .icon-btn |
+| b8a9a63 | style: оформить .checklist-entry |
+| 4e734ef | style: оформить .checklist-entry input |
+| 1eef46b | style: оформить .checklist-row |
+| 644e76b | style: оформить .checklist-row input[type=checkbox] |
+| 18c96c6 | style: оформить .checklist-row input[type=text] |
+| 2ca1275 | style: оформить .checklist-row input[type=text]:hover |
+| 22caef7 | style: оформить .checklist-row.checked input[type=text] |
+| 2d98ae2 | style: оформить .task-drawer .dialog-actions |
+| fef38e5 | style: оформить .save-hint |
+| 48e724c | style: оформить .task-drawer .dialog-actions .auth-btn |
+| 3cfb120 | style: оформить .checklist-track |
+| db52395 | style: оформить тёмную тему [data-theme=dark] .view-btn |
+| 07c7e36 | style: оформить тёмную тему [data-theme=dark] .view-btn.active |
+| 36eff51 | style: оформить тёмную тему [data-theme=dark] .view-btn>span |
+| a7d4a9c | style: оформить тёмную тему [data-theme=dark] .view-date |
+| e384475 | style: оформить тёмную тему [data-theme=dark] #label-filter |
+| 158c170 | style: оформить тёмную тему [data-theme=dark] .task-open:hover .task-text |
+| 6f450dd | style: оформить тёмную тему [data-theme=dark] .task-description |
+| 024c6cb | style: оформить тёмную тему [data-theme=dark] .label-green |
+| 8994835 | style: оформить тёмную тему [data-theme=dark] .label-blue |
+| 154049e | style: оформить тёмную тему [data-theme=dark] .label-purple |
+| 3df8ca0 | style: оформить тёмную тему [data-theme=dark] .label-orange |
+| acf8f18 | style: оформить тёмную тему [data-theme=dark] .label-pink |
+| 425a916 | style: оформить тёмную тему [data-theme=dark] .due-badge,[data-theme=dark] .checklist-summary |
+| 6ee9937 | style: оформить тёмную тему [data-theme=dark] .due-badge.is-overdue |
+| f4c21e4 | style: оформить тёмную тему [data-theme=dark] .due-badge.is-today |
+| 107259e | style: оформить тёмную тему [data-theme=dark] .overdue-card |
+| 85aba7e | style: оформить тёмную тему [data-theme=dark] .card-check-track,[data-theme=dark] .checklist-track |
+| 7345b1e | style: оформить тёмную тему [data-theme=dark] .task-btn[data-action=complete] |
+| a214fe4 | style: оформить тёмную тему [data-theme=dark] .task-btn[data-action=complete]:hover |
+| 38da0b2 | style: оформить тёмную тему [data-theme=dark] .empty-illustration |
+| 1d9823e | style: оформить тёмную тему [data-theme=dark] .empty-illustration svg |
+| 6f12288 | style: оформить тёмную тему [data-theme=dark] .empty-illustration>span |
+| d79c805 | style: оформить тёмную тему [data-theme=dark] .today-group h2 |
+| e32931f | style: оформить тёмную тему [data-theme=dark] .today-group h2>span |
+| 66669a8 | style: оформить тёмную тему [data-theme=dark] .today-empty |
+| 9cfe62f | style: оформить тёмную тему [data-theme=dark] .today-empty h2 |
+| aab77a7 | style: оформить тёмную тему [data-theme=dark] .task-drawer::backdrop |
+| 5672d67 | style: оформить тёмную тему [data-theme=dark] .drawer-body>label,[data-theme=dark] .deadline-field>label,[data-theme=dark] .details-section h3 |
+| e6bbb15 | style: оформить тёмную тему [data-theme=dark] .due-input-row input,[data-theme=dark] .label-entry input,[data-theme=dark] .label-entry select,[data-theme=dark] .checklist-entry input |
+| 07eb7ed | style: оформить тёмную тему [data-theme=dark] .date-shortcuts button,[data-theme=dark] .label-presets button |
+| 1674116 | style: оформить тёмную тему [data-theme=dark] .checklist-row input[type=text] |
+| 719802b | style: оформить тёмную тему [data-theme=dark] .checklist-row.checked input[type=text] |
+| 492972d | style: оформить тёмную тему [data-theme=dark] .text-btn |
+| fad66b9 | style: оформить тёмную тему [data-theme=dark] .optional,[data-theme=dark] .save-hint |
+| 18db929 | style: адаптировать интерфейс @media(min-width:1650px) |
+| 57abe8e | style: адаптировать интерфейс @media(max-width:1150px) |
+| 827b0ea | style: адаптировать интерфейс @media(max-width:800px) |
+| 52d7681 | style: адаптировать интерфейс @media(max-width:560px) |
+| a7fb741 | assets: добавить изображение ArrowLeft.webp |
+| 95e5ef3 | assets: добавить изображение ArrowRight.webp |
+| 65a77d7 | assets: добавить изображение CheckMark.webp |
+| f2b44ee | assets: добавить изображение Pen.webp |
+| a5d01c0 | assets: добавить изображение Save.webp |
+| 84249da | assets: добавить изображение Trashcan.webp |
+| 8d7dad9 | docker: исключить секреты и локальные файлы из образа |
+| bdcc9b5 | docker: собрать PHP с Apache и PDO MySQL |
+| 1d5808a | docker: настроить приложение, MySQL и миграции |
+| bdead57 | test: добавить проверку синтаксиса PHP |
+| d4a5898 | test: проверить авторизацию, задачи и изоляцию пользователей |
+| 3f85a63 | ci: запускать сборку, миграции и HTTP-проверки на GitHub |
+| 3c090e1 | docs: сохранить результаты аудита проекта |
+| cdd11e4 | docs: описать идеи развития приложения |
+| e3b0f5e | docs: описать пользовательский сценарий срочной задачи |
+| 987c3c5 | docs: добавить полную инструкцию запуска и отметить восстановленную историю |
