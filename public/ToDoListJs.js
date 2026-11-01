@@ -141,4 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
         filters.forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.filter===filter));b.classList.toggle('active',b.dataset.filter===filter);});
         document.querySelectorAll('[data-view]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.view===view));b.classList.toggle('active',b.dataset.view===view);});renderUpcoming();
     }
+    form.addEventListener('submit',async e=>{
+        e.preventDefault();if(busy)return;const text=input.value.trim();if(!text||[...text].length>255){message('Введите название от 1 до 255 символов.');return;}
+        if(!addLabel()||!addChecklist())return;
+        if(checklist.some(x=>!x.text.trim())){message('Заполните или удалите пустые пункты чек-листа.');return;}
+        const payload={task:text,status:status.value,priority:priority.value,description:byId('task-description').value.trim(),dueDate:byId('task-due').value||null,labels,checklist:checklist.map(x=>({...x,text:x.text.trim()}))};
+        try{if(await sync(editingId===null?'add':'update',editingId===null?payload:{id:editingId,...payload}))dialog.close();}catch(error){message(error.message);}
+    });
 });
