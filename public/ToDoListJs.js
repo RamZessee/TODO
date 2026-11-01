@@ -25,4 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const date = task.dueDate === localDate() ? 'Сегодня' : task.dueDate === localDate(1) ? 'Завтра' : new Date(`${task.dueDate}T12:00:00`).toLocaleDateString('ru-RU',{day:'numeric',month:'short',...(task.dueDate.slice(0,4) !== localDate().slice(0,4) ? {year:'numeric'} : {})});
         return `<span class="due-badge ${overdue(task) ? 'is-overdue' : task.dueDate === localDate() && task.status !== 'done' ? 'is-today' : ''}" title="${escape(task.dueDate)}">${icon('calendar')}${overdue(task) ? 'Просрочено · ' : ''}${date}</span>`;
     };
+    const labelsHtml = values => values.map(label => `<span class="task-label label-${escape(label.color)}">${escape(label.name)}</span>`).join('');
 });
