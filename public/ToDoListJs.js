@@ -63,4 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('add-label').addEventListener('click', () => addLabel());
     byId('label-name').addEventListener('keydown', e => {if(e.key==='Enter'){e.preventDefault();addLabel();}});
     byId('editor-labels').addEventListener('click', e => {const b=e.target.closest('[data-remove-label]');if(b){labels.splice(Number(b.dataset.removeLabel),1);renderEditorLabels();}});
+    document.querySelectorAll('[data-label-name]').forEach(b => b.addEventListener('click',()=>addLabel(b.dataset.labelName,b.dataset.labelColor)));
 });
