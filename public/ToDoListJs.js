@@ -157,4 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     byId('task-list').addEventListener('click',cardAction);byId('today-list').addEventListener('click',cardAction);
     byId('upcoming-tasks').addEventListener('click',e=>{const b=e.target.closest('[data-open-task]');if(b)openEditor(tasks.find(t=>String(t.id)===b.dataset.openTask));});
+    sections.forEach(section=>{
+        section.addEventListener('dragover',e=>{if(draggedId===null||busy)return;e.preventDefault();section.classList.add('drop-hover');});
+        section.addEventListener('dragleave',e=>{if(!section.contains(e.relatedTarget))section.classList.remove('drop-hover');});
+        section.addEventListener('drop',async e=>{e.preventDefault();sections.forEach(s=>s.classList.remove('drop-hover'));const task=tasks.find(t=>t.id===draggedId);draggedId=null;if(!task||task.status===section.dataset.status)return;try{await sync('update',{id:task.id,task:task.task,priority:task.priority,status:section.dataset.status});}catch(error){message(error.message);}});
+    });
 });
