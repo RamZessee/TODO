@@ -163,4 +163,5 @@ document.addEventListener('DOMContentLoaded', () => {
         section.addEventListener('drop',async e=>{e.preventDefault();sections.forEach(s=>s.classList.remove('drop-hover'));const task=tasks.find(t=>t.id===draggedId);draggedId=null;if(!task||task.status===section.dataset.status)return;try{await sync('update',{id:task.id,task:task.task,priority:task.priority,status:section.dataset.status});}catch(error){message(error.message);}});
     });
     filters.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;render();}));
+    document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.view;filter='all';render();}));
 });
