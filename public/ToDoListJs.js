@@ -155,4 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if(action==='delete'&&!window.confirm('Удалить эту задачу?'))return;
         try{if(action==='complete')await sync('update',{id:task.id,task:task.task,status:'done',priority:task.priority});else await sync(action==='delete'?'delete':'move',action==='delete'?{id:task.id}:{id:task.id,direction:action==='move-back'?'back':'forward'});}catch(error){message(error.message);}
     }
+    byId('task-list').addEventListener('click',cardAction);byId('today-list').addEventListener('click',cardAction);
 });
