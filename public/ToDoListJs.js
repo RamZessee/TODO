@@ -45,4 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
         submit.textContent = task ? 'Сохранить изменения' : 'Создать задачу';
         renderEditorLabels(); renderChecklist(); originalDraft = draft(); dialog.showModal(); input.focus();
     }
+    document.querySelectorAll('[data-create]').forEach(button => button.addEventListener('click', () => openEditor(null, button.dataset.create)));
 });
