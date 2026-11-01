@@ -49,4 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('close-dialog').addEventListener('click', closeEditor); byId('cancel-edit-btn').addEventListener('click', closeEditor);
     dialog.addEventListener('cancel', e => { e.preventDefault(); closeEditor(); });
     dialog.addEventListener('close', () => { if (lastFocus?.isConnected) lastFocus.focus(); });
+    function renderEditorLabels() {
+        byId('editor-labels').innerHTML = labels.map((label,i) => `<span class="task-label label-${escape(label.color)}">${escape(label.name)}<button type="button" data-remove-label="${i}" aria-label="Убрать метку ${escape(label.name)}">×</button></span>`).join('');
+        byId('label-limit').textContent = `${labels.length} / 5`;
+    }
 });
