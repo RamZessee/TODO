@@ -166,4 +166,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.view;filter='all';render();}));
     byId('task-search').addEventListener('input',render);byId('label-filter').addEventListener('change',render);
     byId('priority-sort-btn').addEventListener('click',()=>{sort=sort===null?'desc':sort==='desc'?'asc':null;render();});
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)render();});
 });
