@@ -61,4 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
         labels.push({name,color}); byId('label-name').value = ''; renderEditorLabels(); return true;
     }
     byId('add-label').addEventListener('click', () => addLabel());
+    byId('label-name').addEventListener('keydown', e => {if(e.key==='Enter'){e.preventDefault();addLabel();}});
 });
