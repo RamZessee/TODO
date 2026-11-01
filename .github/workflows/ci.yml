@@ -1,0 +1,52 @@
+name: Validate application
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # Disposable CI-only database credentials, never production secrets.
+      DB_NAME: todo_test
+      DB_USER: todo_test
+      DB_PASSWORD: ci-app-test-only
+      MYSQL_ROOT_PASSWORD: ci-root-test-only
+      APP_PORT: 8080
+      APP_ENV: testing
+      SESSION_SECURE: 'false'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Build PHP application
+        run: docker compose build
+      - name: Check source syntax
+        run: |
+          docker compose run --rm --no-deps app php scripts/lint.php
+          node --check public/ToDoListJs.js
+          node --check scripts/smoke.mjs
+      - name: Apply migrations and verify repeatability
+        run: |
+          docker compose up -d --wait db
+          docker compose run --rm migrate
+          docker compose run --rm migrate
+      - name: Check HTTP authentication and task isolation
+        run: |
+          docker compose up -d --wait app
+          node scripts/smoke.mjs http://127.0.0.1:8080 --allow-test-writes
+      - name: Show logs on failure
+        if: failure()
+        run: docker compose logs --no-color
+      - name: Remove disposable test containers and database
+        if: always()
+        run: docker compose down -v
