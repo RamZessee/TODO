@@ -74,4 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if(checklist.length>=30){message('В чек-листе может быть до 30 пунктов.');return false;}
         checklist.push({text,done:false});byId('checklist-input').value='';renderChecklist();return true;
     }
+    byId('add-checklist').addEventListener('click',addChecklist);
 });
