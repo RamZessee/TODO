@@ -106,4 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('dragend',()=>{draggedId=null;card.classList.remove('dragging');sections.forEach(s=>s.classList.remove('drop-hover'));});
         return card;
     }
+    function renderUpcoming() {
+        const upcoming=tasks.filter(t=>t.status!=='done' && t.dueDate).sort((a,b)=>a.dueDate.localeCompare(b.dueDate)||b.id-a.id);
+        byId('upcoming-count').textContent=upcoming.length;
+        byId('upcoming-tasks').innerHTML=upcoming.length?upcoming.slice(0,3).map(t=>`<button type="button" class="upcoming-item" data-open-task="${t.id}"><span>${escape(t.task)}</span>${dateInfo(t)}</button>`).join(''):`<div class="upcoming-empty">${icon('calendar')}<p>Всё под контролем</p><span>Задайте срок — ближайшие дела появятся здесь.</span></div>`;
+    }
 });
