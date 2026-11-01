@@ -26,4 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<span class="due-badge ${overdue(task) ? 'is-overdue' : task.dueDate === localDate() && task.status !== 'done' ? 'is-today' : ''}" title="${escape(task.dueDate)}">${icon('calendar')}${overdue(task) ? 'Просрочено · ' : ''}${date}</span>`;
     };
     const labelsHtml = values => values.map(label => `<span class="task-label label-${escape(label.color)}">${escape(label.name)}</span>`).join('');
+    const message = text => { const box = byId(dialog.open ? 'dialog-message' : 'task-message'); box.textContent = text; box.classList.toggle('is-hidden', !text); };
 });
