@@ -164,4 +164,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     filters.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;render();}));
     document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.view;filter='all';render();}));
+    byId('task-search').addEventListener('input',render);byId('label-filter').addEventListener('change',render);
 });
