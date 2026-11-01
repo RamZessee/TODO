@@ -34,4 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (draft() !== originalDraft && !window.confirm('Закрыть без сохранения изменений?')) return;
         dialog.close();
     }
+    function openEditor(task, target = 'new') {
+        if (!loaded || busy) return;
+        clearMessages(); lastFocus = document.activeElement; editingId = task?.id ?? null; form.reset();
+        input.value = task?.task ?? ''; status.value = task?.status ?? target; priority.value = task?.priority ?? 'medium';
+        byId('task-description').value = task?.description ?? ''; byId('task-due').value = task?.dueDate ?? '';
+        labels = (task?.labels ?? []).map(x => ({...x})); checklist = (task?.checklist ?? []).map(x => ({...x}));
+        byId('drawer-task-id').textContent = task ? `TASK-${String(task.id).padStart(3,'0')}` : 'МОИ ЗАДАЧИ';
+        byId('dialog-title').textContent = task ? 'Детали задачи' : 'Новая задача';
+        submit.textContent = task ? 'Сохранить изменения' : 'Создать задачу';
+        renderEditorLabels(); renderChecklist(); originalDraft = draft(); dialog.showModal(); input.focus();
+    }
 });
