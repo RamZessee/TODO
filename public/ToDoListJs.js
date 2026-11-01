@@ -48,4 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-create]').forEach(button => button.addEventListener('click', () => openEditor(null, button.dataset.create)));
     byId('close-dialog').addEventListener('click', closeEditor); byId('cancel-edit-btn').addEventListener('click', closeEditor);
     dialog.addEventListener('cancel', e => { e.preventDefault(); closeEditor(); });
+    dialog.addEventListener('close', () => { if (lastFocus?.isConnected) lastFocus.focus(); });
 });
