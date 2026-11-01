@@ -111,4 +111,34 @@ document.addEventListener('DOMContentLoaded', () => {
         byId('upcoming-count').textContent=upcoming.length;
         byId('upcoming-tasks').innerHTML=upcoming.length?upcoming.slice(0,3).map(t=>`<button type="button" class="upcoming-item" data-open-task="${t.id}"><span>${escape(t.task)}</span>${dateInfo(t)}</button>`).join(''):`<div class="upcoming-empty">${icon('calendar')}<p>Всё под контролем</p><span>Задайте срок — ближайшие дела появятся здесь.</span></div>`;
     }
+    function render() {
+        const done=tasks.filter(t=>t.status==='done').length,percent=tasks.length?Math.round(done/tasks.length*100):0;
+        byId('completed-count').textContent=`${done} из ${tasks.length}`;byId('sidebar-count').textContent=tasks.length;
+        byId('progress-percent').textContent=`${percent}%`;byId('board-progress').style.width=`${percent}%`;document.querySelector('.progress-track').setAttribute('aria-valuenow',percent);
+        byId('today-count').textContent=tasks.filter(t=>t.status!=='done'&&t.dueDate===localDate()).length;
+        byId('overdue-count').textContent=tasks.filter(overdue).length;
+        byId('view-date').textContent=new Date().toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long'});
+        const names=[...new Set(tasks.flatMap(t=>(t.labels||[]).map(l=>l.name)))].sort((a,b)=>a.localeCompare(b,'ru'));
+        const selected=byId('label-filter').value;byId('label-filter').innerHTML='<option value="">Все метки</option>'+names.map(n=>`<option value="${escape(n)}">${escape(n)}</option>`).join('');byId('label-filter').value=names.includes(selected)?selected:'';
+        byId('label-suggestions').innerHTML=names.map(n=>`<option value="${escape(n)}"></option>`).join('');
+        const query=byId('task-search').value.trim().toLocaleLowerCase('ru'),label=byId('label-filter').value;
+        let visible=tasks.filter(t=>(filter==='all'||(filter==='done'?t.status==='done':filter==='overdue'?overdue(t):t.status!=='done'))&&(!label||(t.labels||[]).some(l=>l.name===label))&&[t.task,t.description,...(t.labels||[]).map(l=>l.name)].join(' ').toLocaleLowerCase('ru').includes(query));
+        if(sort)visible.sort((a,b)=>{const ranks={low:1,medium:2,high:3};return(sort==='desc'?-1:1)*(ranks[a.priority]-ranks[b.priority])||b.id-a.id;});
+        sections.forEach(section=>{
+            const items=visible.filter(t=>t.status===section.dataset.status),container=section.querySelector('.tasks-container');section.querySelector('.column-count').textContent=items.length;container.replaceChildren();
+            if(!items.length){const empty=document.createElement('div');empty.className='empty-column';empty.innerHTML=`<div class="empty-illustration">${icon(section.dataset.status==='done'?'check':'board')}<span></span></div><p>${query||label||filter!=='all'?'Задач не найдено':section.dataset.status==='done'?'Место для ваших побед':'Пока чистый лист'}</p><span>${query||label||filter!=='all'?'Измените поиск или фильтры':'Начните с одной небольшой задачи'}</span>`;container.append(empty);}
+            items.forEach(t=>container.append(makeCard(t)));
+        });
+        const today=byId('today-list');today.replaceChildren();
+        const due=visible.filter(t=>t.status!=='done'&&t.dueDate&&t.dueDate<=localDate());
+        for(const [heading,items] of [['Просроченные',due.filter(overdue)],['Сегодня',due.filter(t=>!overdue(t))]]){
+            if(!items.length)continue;const group=document.createElement('section');group.className='today-group';group.innerHTML=`<h2>${heading}<span>${items.length}</span></h2>`;items.sort((a,b)=>a.dueDate.localeCompare(b.dueDate)).forEach(t=>group.append(makeCard(t,true)));today.append(group);
+        }
+        if(!due.length)today.innerHTML=`<div class="today-empty">${icon('check')}<h2>${query||label||filter!=='all'?'Задач не найдено':'На сегодня всё спокойно'}</h2><p>${query||label||filter!=='all'?'Измените поиск или фильтры.':'Здесь появятся активные задачи на сегодня и просроченные дела.'}</p><button type="button" class="auth-btn primary" id="today-create">Добавить задачу на сегодня</button></div>`;
+        byId('today-create')?.addEventListener('click',()=>{openEditor(null);byId('task-due').value=localDate();originalDraft=draft();});
+        byId('task-list').classList.toggle('is-hidden',view!=='board');today.classList.toggle('is-hidden',view!=='today');
+        const sortButton=byId('priority-sort-btn');sortButton.textContent=sort==='desc'?'Сначала важные ↓':sort==='asc'?'Сначала низкие ↑':'Приоритет ↕';sortButton.classList.toggle('active',!!sort);
+        filters.forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.filter===filter));b.classList.toggle('active',b.dataset.filter===filter);});
+        document.querySelectorAll('[data-view]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.view===view));b.classList.toggle('active',b.dataset.view===view);});renderUpcoming();
+    }
 });
