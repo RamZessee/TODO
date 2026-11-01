@@ -1,0 +1,10 @@
+# Only application source, schema and scripts belong in the image.
+**
+!app/
+!app/**
+!public/
+!public/**
+!database/
+!database/**
+!scripts/
+!scripts/**
