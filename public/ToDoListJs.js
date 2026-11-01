@@ -75,4 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
         checklist.push({text,done:false});byId('checklist-input').value='';renderChecklist();return true;
     }
     byId('add-checklist').addEventListener('click',addChecklist);
+    byId('checklist-input').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addChecklist();}});
 });
