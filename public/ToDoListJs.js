@@ -46,4 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
         renderEditorLabels(); renderChecklist(); originalDraft = draft(); dialog.showModal(); input.focus();
     }
     document.querySelectorAll('[data-create]').forEach(button => button.addEventListener('click', () => openEditor(null, button.dataset.create)));
+    byId('close-dialog').addEventListener('click', closeEditor); byId('cancel-edit-btn').addEventListener('click', closeEditor);
 });
