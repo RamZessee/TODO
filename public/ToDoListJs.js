@@ -96,4 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         try {const data=await request(action,payload);tasks=Array.isArray(data.tasks)?data.tasks:[];loaded=true;render();clearMessages();return true;}
         finally{busy=false;submit.disabled=false;byId('task-list').setAttribute('aria-busy','false');}
     }
+    function makeCard(task,compact=false) {
+        const card=document.createElement('article');card.className=`task priority-${task.priority}${task.status==='done'?' done':''}${overdue(task)?' overdue-card':''}${compact?' compact-task':''}`;
+        card.dataset.id=task.id;card.draggable=!compact;
+        const action=(name,label)=>`<button type="button" class="task-btn" data-action="${name}" title="${label}" aria-label="${label}">${icon(name==='complete'?'check':name)}</button>`;
+        const checks=task.checklist||[], done=checks.filter(x=>x.done).length;
+        card.innerHTML=`<div class="task-top"><span class="task-id">TASK-${String(task.id).padStart(3,'0')}</span><span class="badge priority-${escape(task.priority)}">${escape(config.priorityLabels[task.priority]||'Средний')}</span></div><button type="button" class="task-open" data-action="edit" aria-label="Открыть задачу: ${escape(task.task)}"><span class="task-text">${escape(task.task)}</span></button>${task.description?`<p class="task-description">${escape(task.description)}</p>`:''}<div class="card-labels">${labelsHtml(task.labels||[])}</div><div class="card-details">${dateInfo(task)}${checks.length?`<span class="checklist-summary" title="Выполнено пунктов">${icon('list')}${done} из ${checks.length}</span>`:''}</div>${checks.length?`<div class="card-check-track"><span style="width:${done/checks.length*100}%"></span></div>`:''}<div class="task-bottom"><span class="task-state">${icon(task.status==='done'?'check':'board')}${escape(config.statusLabels[task.status])}</span><div class="task-buttons">${task.status!=='done'?action('complete','Выполнить задачу'):''}${task.status!=='new'?action('move-back','На предыдущий этап'):''}${task.status!=='done'?action('move-forward','На следующий этап'):''}${action('edit','Редактировать задачу')}${action('delete','Удалить задачу')}</div></div>`;
+        card.addEventListener('dragstart',e=>{if(busy || e.target.closest('button')){e.preventDefault();return;}draggedId=task.id;card.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(task.id));});
+        card.addEventListener('dragend',()=>{draggedId=null;card.classList.remove('dragging');sections.forEach(s=>s.classList.remove('drop-hover'));});
+        return card;
+    }
 });
