@@ -78,4 +78,5 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('checklist-input').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addChecklist();}});
     byId('editor-checklist').addEventListener('input',e=>{if(e.target.dataset.checkText!==undefined)checklist[Number(e.target.dataset.checkText)].text=e.target.value;});
     byId('editor-checklist').addEventListener('change',e=>{if(e.target.dataset.check!==undefined){checklist[Number(e.target.dataset.check)].done=e.target.checked;renderChecklist();}});
+    byId('editor-checklist').addEventListener('click',e=>{const b=e.target.closest('[data-remove-check]');if(b){checklist.splice(Number(b.dataset.removeCheck),1);renderChecklist();}});
 });
