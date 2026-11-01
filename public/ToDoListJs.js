@@ -69,4 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
         byId('checklist-progress').style.width=`${checklist.length ? done/checklist.length*100 : 0}%`;
         byId('editor-checklist').innerHTML=checklist.map((item,i)=>`<div class="checklist-row ${item.done?'checked':''}"><input type="checkbox" data-check="${i}" ${item.done?'checked':''} aria-label="Выполнено: ${escape(item.text)}"><input type="text" data-check-text="${i}" value="${escape(item.text)}" maxlength="200" aria-label="Текст пункта ${i+1}" required><button type="button" class="icon-btn" data-remove-check="${i}" aria-label="Удалить пункт ${i+1}">${icon('close')}</button></div>`).join('');
     }
+    function addChecklist() {
+        const text=byId('checklist-input').value.trim();if(!text)return true;
+        if(checklist.length>=30){message('В чек-листе может быть до 30 пунктов.');return false;}
+        checklist.push({text,done:false});byId('checklist-input').value='';renderChecklist();return true;
+    }
 });
