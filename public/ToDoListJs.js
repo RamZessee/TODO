@@ -53,4 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         byId('editor-labels').innerHTML = labels.map((label,i) => `<span class="task-label label-${escape(label.color)}">${escape(label.name)}<button type="button" data-remove-label="${i}" aria-label="Убрать метку ${escape(label.name)}">×</button></span>`).join('');
         byId('label-limit').textContent = `${labels.length} / 5`;
     }
+    function addLabel(name = byId('label-name').value, color = byId('label-color').value) {
+        name = name.trim(); if (!name) return true;
+        if ([...name].length > 30) {message('Название метки: не более 30 символов.');return false;}
+        if (labels.some(x => x.name.toLocaleLowerCase('ru') === name.toLocaleLowerCase('ru'))) {byId('label-name').value='';return true;}
+        if (labels.length >= 5) {message('На задаче может быть до 5 меток.');return false;}
+        labels.push({name,color}); byId('label-name').value = ''; renderEditorLabels(); return true;
+    }
 });
