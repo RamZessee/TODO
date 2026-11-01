@@ -168,4 +168,5 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('priority-sort-btn').addEventListener('click',()=>{sort=sort===null?'desc':sort==='desc'?'asc':null;render();});
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)render();});
     setInterval(()=>{if(loaded&&!dialog.open)render();},60000);
+    sync('list').catch(error=>{render();message(error.message);});
 });
