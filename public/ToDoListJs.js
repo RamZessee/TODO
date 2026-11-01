@@ -148,4 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const payload={task:text,status:status.value,priority:priority.value,description:byId('task-description').value.trim(),dueDate:byId('task-due').value||null,labels,checklist:checklist.map(x=>({...x,text:x.text.trim()}))};
         try{if(await sync(editingId===null?'add':'update',editingId===null?payload:{id:editingId,...payload}))dialog.close();}catch(error){message(error.message);}
     });
+    async function cardAction(e){
+        const button=e.target.closest('[data-action]');if(!button||busy)return;
+        const task=tasks.find(t=>String(t.id)===button.closest('.task')?.dataset.id);if(!task)return;const action=button.dataset.action;
+        if(action==='edit'){openEditor(task);return;}
+        if(action==='delete'&&!window.confirm('Удалить эту задачу?'))return;
+        try{if(action==='complete')await sync('update',{id:task.id,task:task.task,status:'done',priority:task.priority});else await sync(action==='delete'?'delete':'move',action==='delete'?{id:task.id}:{id:task.id,direction:action==='move-back'?'back':'forward'});}catch(error){message(error.message);}
+    }
 });
