@@ -81,4 +81,5 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('editor-checklist').addEventListener('click',e=>{const b=e.target.closest('[data-remove-check]');if(b){checklist.splice(Number(b.dataset.removeCheck),1);renderChecklist();}});
     byId('editor-checklist').addEventListener('keydown',e=>{if(e.key==='Enter')e.preventDefault();});
     byId('clear-due').addEventListener('click',()=>{byId('task-due').value='';});
+    document.querySelectorAll('[data-due-offset]').forEach(b=>b.addEventListener('click',()=>{byId('task-due').value=localDate(Number(b.dataset.dueOffset));}));
 });
