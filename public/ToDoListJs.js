@@ -82,4 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     byId('editor-checklist').addEventListener('keydown',e=>{if(e.key==='Enter')e.preventDefault();});
     byId('clear-due').addEventListener('click',()=>{byId('task-due').value='';});
     document.querySelectorAll('[data-due-offset]').forEach(b=>b.addEventListener('click',()=>{byId('task-due').value=localDate(Number(b.dataset.dueOffset));}));
+    async function request(action,payload) {
+        const read=action==='list';let response;
+        try {response=await fetch(`${config.apiUrl}?action=${encodeURIComponent(action)}`,{method:read?'GET':'POST',credentials:'same-origin',cache:'no-store',headers:read?{'Accept':'application/json'}:{'Accept':'application/json','Content-Type':'application/json','X-CSRF-Token':config.csrfToken},...(read?{}:{body:JSON.stringify(payload)})});}
+        catch {throw new Error('Нет связи с сервером. Проверьте подключение и попробуйте ещё раз.');}
+        if(response.status===401 || response.status===403)throw new Error('Сессия истекла. Обновите страницу и войдите снова.');
+        let data;try{data=await response.json();}catch{throw new Error('Не удалось прочитать ответ сервера. Попробуйте ещё раз.');}
+        if(!response.ok || data.success!==true)throw new Error(response.status===404?'Задача уже удалена. Обновите страницу.':response.status===422?'Проверьте поля задачи: дату, длину текста и пункты чек-листа.':'Не удалось сохранить изменения. Попробуйте ещё раз.');
+        return data;
+    }
 });
